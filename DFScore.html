@@ -120,9 +120,9 @@
   <header>
     <div>
       <h1>Dynamic Faces timestamps</h1>
-      <p>Turns E-Prime logs from the Dynamic Faces task into start and end times for every clip on the eye-tracker clock, in the same layout as the manual coding sheet.</p>
+      <p>Turns E-Prime logs from the Dynamic Faces into timestamps. Timestamps used from child-scene video on PupilCloud. </p>
     </div>
-    <div class="lock"><strong>Your files stay on this computer.</strong>Logs are read and processed inside your browser. The page is blocked from sending data anywhere, so nothing is uploaded.</div>
+    <div class="lock"><strong>Files stay on this computer.</strong>Logs are read and processed inside your browser.</div>
   </header>
 
   <div class="legend" aria-label="Emotion colours">
@@ -147,10 +147,10 @@
     <div class="num" aria-hidden="true">2</div>
     <div>
       <h2>Enter participant ID and first face onset</h2>
-      <p class="hint">For each session, find the first face in the scene video and enter the eye-tracker time it appears, as mm:ss.000. The strip shows the clip order; the outlined cell and the note under it tell you which face comes first.</p>
+      <p class="hint">For each session, find the first face stimuli in the child scene video and enter the eye-tracker time it appears, as mm:ss.000 (e.g., 00.38.314). The strip shows the clip order; the outlined cell and the note under it tell you which face comes first.</p>
       <div class="actions">
-        <button type="button" id="importBtn">Fill in from a sheet</button>
-        <button type="button" id="templateBtn">Download blank sheet</button>
+        <button type="button" id="importBtn">Optional: Fill in from a sheet</button>
+        <button type="button" id="templateBtn">Optional: Download blank sheet</button>
         <input type="file" id="sheetInput" accept=".xlsx,.xls,.csv">
       </div>
       <div class="tablewrap">
@@ -171,8 +171,8 @@
       <h2>Download timestamps</h2>
       <p class="hint">One Excel file: the timestamps in the coding-sheet layout, a clip-by-clip list, and a check sheet flagging anything unusual in a log.</p>
       <div class="settings">
-        <label>Clip length (ms)<input type="number" id="clipMs" value="1001" min="1" step="1"></label>
-        <label>Flag gaps off the median by more than (ms)<input type="number" id="gapTol" value="150" min="1" step="1"></label>
+        <label>Clip length in ms (default 1001)<input type="number" id="clipMs" value="1001" min="1" step="1"></label>
+        <label>Flag gaps off the median by more than in ms (default 150)<input type="number" id="gapTol" value="150" min="1" step="1"></label>
       </div>
       <div class="actions">
         <button type="button" class="primary" id="exportBtn" disabled>Download timestamps</button>
